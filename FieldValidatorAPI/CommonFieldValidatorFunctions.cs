@@ -5,12 +5,12 @@ using System.Text.RegularExpressions;
 
 namespace FieldValidatorAPI
 {
-    public delegate bool RequiredValidDel(string fieldVal);
-    public delegate bool StringLengthValidDel(string fieldVal, int min, int max);
-    public delegate bool DateValidDel(string fieldVal, out DateTime validDateTime);
-    public delegate bool PatternMatchValidDel(string fieldVal, string pattern);
-    public delegate bool CompareFieldsValidDel(string fieldVal, string fieldValCompare);
-    public class CommonFieldValidatorFunctions
+    public delegate bool RequiredValidDel(string fieldVal);   //用于验证字段是否为必填项
+    public delegate bool StringLengthValidDel(string fieldVal, int min, int max);  //用于验证字符串的长度是否在指定范围内
+    public delegate bool DateValidDel(string fieldVal, out DateTime validDateTime);  //用于验证字符串是否可以转换为有效的 DateTime，并通过输出参数提供有效的日期时间值。
+    public delegate bool PatternMatchValidDel(string fieldVal, string pattern);  //用于验证字符串是否与指定的模式匹配。
+    public delegate bool CompareFieldsValidDel(string fieldVal, string fieldValCompare);  // 用于验证两个字段的值是否相等。
+    public class CommonFieldValidatorFunctions  //包含通用字段验证功能的类
     {
         private static RequiredValidDel _requiredValidDel = null;
         private static StringLengthValidDel _stringLengthValidDel = null;
