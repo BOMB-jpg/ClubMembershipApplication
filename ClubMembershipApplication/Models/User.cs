@@ -7,7 +7,9 @@ namespace ClubMembershipApplication.Models
 {
     public class User
     {
-       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //数据模型的目的是提供一种清晰的方式来组织和操纵应用程序中的数据，
+        //以便在编程中更轻松地处理相关的任务，如数据验证、存储和检索。通过使用数据模型
+       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]  //示这个标识符是通过数据库自动增长生成的
         public int Id { get; set; }
 
         public string EmailAddress { get; set; }
