@@ -6,6 +6,7 @@ using System.Text;
 
 namespace ClubMembershipApplication.FieldValidators
 {
+// what is  fieldValidators
     public class UserRegistrationValidator:IFieldValidator
     {
         const int FirstName_Min_Length = 2;
