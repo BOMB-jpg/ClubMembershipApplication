@@ -17,7 +17,7 @@ namespace FieldValidatorAPI
         private static DateValidDel _dateValidDel = null;
         private static PatternMatchValidDel _patternMatchValidDel = null;
         private static CompareFieldsValidDel _compareFieldsValidDel = null;
-
+        //委托属性部分 目标方法
         public static RequiredValidDel RequiredFieldValidDel
         {
             get 
@@ -71,7 +71,7 @@ namespace FieldValidatorAPI
             }
         }
 
-
+//从这开始是具体  逻辑验证部分
         private static bool RequiredFieldValid(string fieldVal)
         {
             if (!string.IsNullOrEmpty(fieldVal))
