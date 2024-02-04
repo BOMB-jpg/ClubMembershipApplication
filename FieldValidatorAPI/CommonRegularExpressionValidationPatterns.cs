@@ -6,6 +6,7 @@ namespace FieldValidatorAPI
 {
      public static class CommonRegularExpressionValidationPatterns
      {
+          //正则表达式的用法 进行匹配
 
         public const string Email_Address_RegEx_Pattern = @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$";
 
