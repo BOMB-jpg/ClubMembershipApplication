@@ -7,7 +7,7 @@ using System.Linq;
 //运用了 EntityFrameWork的CodeFirst模式来将用户信息插入到数据库中 
 namespace ClubMembershipApplication.Data
 {
-    public class RegisterUser : IRegister
+    public class RegisterUser : IRegister   //实现接口的  的两根书
     {
         public bool EmailExists(string emailAddress)
         {
