@@ -50,21 +50,21 @@ namespace ClubMembershipApplication.Views
             Console.ReadKey();
         }
 
-        private string GetInputFromUser(FieldConstants.UserRegistrationField field, string promptText)
+        private string GetInputFromUser(FieldConstants.UserRegistrationField field, string promptText)   //表示用户输入时的提示文本
         {
-            string fieldVal = "";
+            string fieldVal = "";   //获取字段类型 
 
             do
             {
                 Console.Write(promptText);
-                fieldVal = Console.ReadLine();
+                fieldVal = Console.ReadLine();    
             }
             while (!FieldValid(field, fieldVal));
 
             return fieldVal;
         }
 
-        private bool FieldValid(FieldConstants.UserRegistrationField field, string fieldValue)
+        private bool FieldValid(FieldConstants.UserRegistrationField field, string fieldValue)   //用该函数判断 输入字段是否合法
         {
             if (!_fieldValidator.ValidatorDel((int)field, fieldValue, _fieldValidator.FieldArray, out string invalidMessage))
             {
